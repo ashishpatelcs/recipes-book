@@ -7,6 +7,7 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
   imports: [
     CommonModule
   ],
-  declarations: [ShoppingListComponent, ShoppingListEditComponent]
+  declarations: [ShoppingListComponent, ShoppingListEditComponent],
+  exports: [ShoppingListComponent]
 })
 export class ShoppingListModule { }
