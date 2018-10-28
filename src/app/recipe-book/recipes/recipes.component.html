@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list (recipeSelected)='selectedRecipe($event)'></app-recipe-list>
+    <app-recipe-list (recipeSelected)='recipe = $event'></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail [recipeItem]='recipe'></app-recipe-detail>
+    <app-recipe-detail *ngIf="recipe; else selectARecipe" [recipeItem]='recipe'></app-recipe-detail>
+    <ng-template #selectARecipe>
+      <p>Please select a recipe from the recipe list on the left!</p>
+    </ng-template>
   </div>
 </div>

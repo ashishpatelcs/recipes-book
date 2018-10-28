@@ -9,7 +9,7 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('recipeItem') recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter <Recipe>();
+  @Output() recipeSelected = new EventEmitter <void>();
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class RecipeItemComponent implements OnInit {
   }
 
   selectRecipe() {
-    this.recipeSelected.emit(this.recipe);
+    this.recipeSelected.emit();
   }
 
 }
