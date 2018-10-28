@@ -19,4 +19,8 @@ export class SampleComponent implements OnInit {
   ngOnInit() {
   }
 
+  createServer(server) {
+    this.servers.push(server);
+  }
+
 }

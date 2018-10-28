@@ -1,7 +1,6 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         {{ server.name }}
-        <span class="pull-right"> {{ time() | date }}</span>
       </div>
       <div *ngIf="server.type===0" class="panel-body" style="font-weight:bold;color:brown;">
         {{ server.content }}

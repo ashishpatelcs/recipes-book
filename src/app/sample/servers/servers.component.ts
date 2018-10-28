@@ -14,8 +14,4 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
-  time() {
-    return Date.now();
-  }
-
 }
