@@ -11,6 +11,7 @@ import { RecipeBookModule } from './recipe-book/recipe-book.module';
 import { SampleComponent } from './sample/sample.component';
 import { CockpitComponent } from './sample/cockpit/cockpit.component';
 import { ServersComponent } from './sample/servers/servers.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ServersComponent } from './sample/servers/servers.component';
     HeaderComponent,
     SampleComponent,
     CockpitComponent,
-    ServersComponent
+    ServersComponent,
+    DropdownDirective
   ],
   imports: [
     RouterModule.forRoot([
