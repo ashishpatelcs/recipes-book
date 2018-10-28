@@ -1,12 +1,11 @@
 
-<app-header></app-header>
+<app-header (navlinkChanged)='navlinkUpdate($event)'></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <!-- <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list> -->
-      <router-outlet></router-outlet>
+      <app-recipes *ngIf="navlink=='recipes'"></app-recipes>
+      <app-shopping-list *ngIf="navlink=='shoppinglist'"></app-shopping-list>
     </div>
   </div>
 </div>
