@@ -8,15 +8,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { RecipeBookModule } from './recipe-book/recipe-book.module';
+import { SampleComponent } from './sample/sample.component';
+import { CockpitComponent } from './sample/cockpit/cockpit.component';
+import { ServersComponent } from './sample/servers/servers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    SampleComponent,
+    CockpitComponent,
+    ServersComponent
   ],
   imports: [
     RouterModule.forRoot([
-
+      {path: 'sample', component: SampleComponent}
     ]),
     BrowserModule,
     ShoppingListModule,
