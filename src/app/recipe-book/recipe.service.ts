@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Recipe } from './recipes/recipe.model';
 
 @Injectable()
 export class RecipeService {
+  recipeSelected = new EventEmitter<Recipe>();
+
   recipes: Recipe[] = [
     new Recipe('Test Recipe', 'This is a test recipe', 'http://www.indianfoodforever.com/images/rainy-recipes.jpg'),
     new Recipe('Paratha', 'This is paratha recipe',
