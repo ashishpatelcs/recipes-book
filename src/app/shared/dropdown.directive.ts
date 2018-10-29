@@ -4,4 +4,5 @@ import { Directive } from '@angular/core';
   selector: '[appDropdown]'
 })
 export class DropdownDirective {
+  constructor() { }
 }
