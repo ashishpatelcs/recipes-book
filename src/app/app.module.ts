@@ -11,7 +11,7 @@ import { RecipeBookModule } from './recipe-book/recipe-book.module';
 import { SampleComponent } from './sample/sample.component';
 import { CockpitComponent } from './sample/cockpit/cockpit.component';
 import { ServersComponent } from './sample/servers/servers.component';
-import { DropdownDirective } from './shared/dropdown.directive';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     HeaderComponent,
     SampleComponent,
     CockpitComponent,
-    ServersComponent,
-    DropdownDirective
+    ServersComponent
   ],
   imports: [
     RouterModule.forRoot([
@@ -30,7 +29,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
     ShoppingListModule,
     RecipeBookModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
