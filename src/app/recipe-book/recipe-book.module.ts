@@ -5,6 +5,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { SharedModule } from '../shared/shared.module';
+import { RecipeService } from './recipe.service';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     RecipeDetailComponent,
     RecipesComponent
   ],
-  exports: [RecipesComponent]
+  exports: [RecipesComponent],
+  providers: [RecipeService]
 })
 export class RecipeBookModule { }
