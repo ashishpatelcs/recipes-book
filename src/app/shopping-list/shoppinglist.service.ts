@@ -23,4 +23,5 @@ export class ShoppinglistService {
     this.ingredientAdded.emit(this.ingredients);
     this.toastr.success('New Ingredient Added!');
   }
+
 }
