@@ -18,8 +18,8 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  addToShoppingList(ingredients: Ingredient[]) {
-    this.recipeService.toShoppingList(ingredients);
+  addToShoppingList() {
+    this.recipeService.toShoppingList(this.recipe.ingredients);
     this.toastr.success('Recipe ingredients added to shopping list!');
   }
 

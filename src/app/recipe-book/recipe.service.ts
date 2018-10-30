@@ -33,8 +33,6 @@ export class RecipeService {
   }
 
   toShoppingList(ingredients: Ingredient[]) {
-    for (const ingredient of ingredients) {
-      this.shoppinglistService.addIngredient(ingredient);
-    }
+    this.shoppinglistService.addIngredient(...ingredients);
   }
 }
