@@ -23,7 +23,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     RouterModule.forRoot([
-      {path: 'sample', component: SampleComponent}
+      { path: 'sample', component: SampleComponent }
     ]),
     BrowserModule,
     ShoppingListModule,
