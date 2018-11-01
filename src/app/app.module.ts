@@ -24,9 +24,7 @@ import { ToastrModule } from '../../node_modules/ngx-toastr';
     ServersComponent
   ],
   imports: [
-    RouterModule.forRoot([
-      { path: 'sample', component: SampleComponent }
-    ]),
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     ShoppingListModule,
