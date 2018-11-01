@@ -24,7 +24,6 @@ import { ToastrModule } from '../../node_modules/ngx-toastr';
     ServersComponent
   ],
   imports: [
-    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     ShoppingListModule,
