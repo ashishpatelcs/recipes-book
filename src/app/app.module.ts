@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -14,6 +13,7 @@ import { CockpitComponent } from './sample/cockpit/cockpit.component';
 import { ServersComponent } from './sample/servers/servers.component';
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from '../../node_modules/ngx-toastr';
+import { RoutesModule } from './routes/routes.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { ToastrModule } from '../../node_modules/ngx-toastr';
     ServersComponent
   ],
   imports: [
+    RoutesModule,
     BrowserModule,
     BrowserAnimationsModule,
     ShoppingListModule,

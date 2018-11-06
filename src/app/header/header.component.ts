@@ -7,15 +7,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public open = false;
-  @Output() navlinkChanged = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  navChanged(nav: string) {
-    this.navlinkChanged.emit(nav);
   }
 
   onClick() {
