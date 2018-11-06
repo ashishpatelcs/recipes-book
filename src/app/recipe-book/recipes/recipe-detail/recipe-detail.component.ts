@@ -3,6 +3,7 @@ import { Recipe } from '../recipe.model';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { RecipeService } from '../../recipe.service';
 import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -10,12 +11,14 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-  // tslint:disable-next-line:no-input-rename
-  @Input('recipeItem') recipe: Recipe;
+  public recipe: Recipe;
 
-  constructor(private recipeService: RecipeService, private toastr: ToastrService) { }
+  constructor(private recipeService: RecipeService, private toastr: ToastrService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.recipe = this.recipeService.getRecipeById(params['id']);
+    });
   }
 
   addToShoppingList() {
