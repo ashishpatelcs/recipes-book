@@ -14,7 +14,6 @@ import { ServersComponent } from './sample/servers/servers.component';
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from '../../node_modules/ngx-toastr';
 import { RoutesModule } from './routes/routes.module';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

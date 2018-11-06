@@ -8,7 +8,7 @@ export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
 
   recipes: Recipe[] = [
-    new Recipe('Samosa Chat',
+    new Recipe(1, 'Samosa Chat',
       'Samasa is a popular snack in Indian sub-continent!',
       'http://www.indianfoodforever.com/images/rainy-recipes.jpg',
       [
@@ -16,7 +16,7 @@ export class RecipeService {
         new Ingredient('Potato', 2)
       ]
     ),
-    new Recipe('Paratha',
+    new Recipe(2, 'Paratha',
       'This is paratha recipe',
       'https://media.gettyimages.com/photos/indian-breakfast-in-goa-picture-id511910426?s=612x612',
       [
@@ -30,6 +30,17 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipeById(id) {
+    let recipe = null;
+    this.recipes.forEach(e => {
+      if (e.id == id) {
+        recipe = e;
+        return;
+      }
+    });
+    return recipe;
   }
 
   toShoppingList(ingredients: Ingredient[]) {

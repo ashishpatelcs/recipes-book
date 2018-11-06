@@ -6,9 +6,13 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipesComponent } from './recipes/recipes.component';
 import { SharedModule } from '../shared/shared.module';
 import { RecipeService } from './recipe.service';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RouterModule } from '@angular/router';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   imports: [
+    RouterModule,
     CommonModule,
     SharedModule
   ],
@@ -16,7 +20,9 @@ import { RecipeService } from './recipe.service';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeEditComponent,
+    RecipeStartComponent
   ],
   exports: [RecipesComponent],
   providers: [RecipeService]
