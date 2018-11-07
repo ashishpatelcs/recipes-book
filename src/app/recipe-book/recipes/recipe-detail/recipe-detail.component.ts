@@ -3,7 +3,7 @@ import { Recipe } from '../recipe.model';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { RecipeService } from '../../recipe.service';
 import { ToastrService } from 'ngx-toastr';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class RecipeDetailComponent implements OnInit {
   public recipe: Recipe;
 
-  constructor(private recipeService: RecipeService, private toastr: ToastrService, private route: ActivatedRoute) { }
+  constructor(private recipeService: RecipeService, private toastr: ToastrService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -24,6 +24,10 @@ export class RecipeDetailComponent implements OnInit {
   addToShoppingList() {
     this.recipeService.toShoppingList(this.recipe.ingredients);
     this.toastr.success('Recipe ingredients added to shopping list!');
+  }
+
+  onEditRecipe() {
+    this.router.navigate(['../', 'edit'], {relativeTo: this.route});
   }
 
 }
